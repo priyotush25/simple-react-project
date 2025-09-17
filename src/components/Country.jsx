@@ -1,7 +1,15 @@
 const Country = ({ country }) => {
+  const visitedHandle = () => {
+    console.log("visited");
+  };
+
   return (
-    <div>
-      <h4>Name : {country.name.common}</h4>
+    <div className="box">
+      <h2>Name : {country.name.common}</h2>
+      <img src={country.flags.png} alt="" />
+      <h4>Independent : {country.population}</h4>
+
+      <button onClick={visitedHandle}>Visited</button>
     </div>
   );
 };

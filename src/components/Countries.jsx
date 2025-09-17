@@ -3,13 +3,17 @@ import Country from "./Country";
 
 const Countries = ({ countries }) => {
   const countriesData = use(countries);
-  console.log(countriesData);
+
   return (
     <>
-      <h1>Travel Countries : {countriesData.length}</h1>
-      {countriesData.map((country) => (
-        <Country key={country.name.name} country={country} />
-      ))}
+      <h1 style={{ textAlign: "center" }}>
+        Travel Countries : {countriesData.length}
+      </h1>
+      <div className="container">
+        {countriesData.map((country) => (
+          <Country key={country.name.name} country={country} />
+        ))}
+      </div>
     </>
   );
 };
